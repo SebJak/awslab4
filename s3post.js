@@ -20,6 +20,13 @@ Policy.prototype.getConditions = function(){
 	return this.policy.conditions;
 }
 
+Policy.prototype.addConditions = function(fields, name, value){
+	
+	fields.push(hiddenField(name, value));
+	
+	return fields;
+}
+
 Policy.prototype.generateSignature = function(secretAccessKey){
 	return helpers.hmac("sha1", secretAccessKey, this.generateEncodedPolicyDocument(), 'base64');	
 }

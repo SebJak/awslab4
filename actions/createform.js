@@ -5,6 +5,7 @@ var S3Form = require("../s3post").S3Form;
 var AWS_CONFIG_FILE = "config.json";
 var POLICY_FILE = "policy.json";
 var INDEX_TEMPLATE = "index.ejs";
+var ip = require('ip');
 
 
 var task = function(request, callback){
@@ -26,6 +27,7 @@ var task = function(request, callback){
 
 	var fields = s3Form.generateS3FormFields();
 	fields = s3Form.addS3CredientalsFields(fields, awsConfig);
+	//fields = policy.addConditions(fields, "x-amz-meta-addressIP", ip.address());
 	console.log("Fields: ",fields);
 	//4. get bucket name
 	
