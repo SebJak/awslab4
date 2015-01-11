@@ -5,7 +5,7 @@
     				 {"success_action_redirect": "http:\\localhost:8080"},   
     				 ["content-length-range", 0, 1048576],
     				 {"x-amz-meta-userName": "Sebastian Jakowski"},
-    				 {"x-amz-missing-meta-addressIP": "ip"}
+    				 {"x-amz-meta-addressIP": "ip"}
     				]
    
 }
