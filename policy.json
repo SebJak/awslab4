@@ -5,7 +5,7 @@
     				 {"success_action_redirect": "http:\\localhost:8080\\uploaded"},   
     				 ["content-length-range", 0, 1048576],
     				 {"x-amz-meta-userName": "Sebastian Jakowski"},
-    				 {"x-amz-meta-addressIP": "123.123.212.0"}
+    				 {"x-amz-meta-addressIP": "192.168.1.103"}
     				]
    
 }
