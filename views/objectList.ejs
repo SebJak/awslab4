@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+</head>
+<body>
+	<h1>Uploaded object list</h1>
+	<nav class="navbar">
+
+	</nav>
+	<div class="table-responsive">
+		<table class="table">
+			<tr>
+				<td>Key</td>
+				<td>Modified</td>
+				<td>Stored class</td>
+			</tr>
+			<% objects.forEach(function(elem){ %>
+			<tr>
+				<td>
+					<a href=<%= "https://s3-us-west-2.amazonaws.com/"+bucket+"/"+elem.Key %>><%= elem.Key %></a>
+				</td>
+				<td><%= elem.LastModified %></td>
+				<td><%= elem.StorageClass %></td>
+			</tr>
+			<%}); %> 
+		</table>
+	</div>
+
+	<a type="button" class="btn btn-primary" href="/">Back</a>
+</body>
+</html>

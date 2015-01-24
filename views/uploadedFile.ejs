@@ -1,0 +1,61 @@
+<html>
+<head>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+</head>
+<body>
+	<h1>Uploaded File</h1>
+	<nav class="navbar">
+
+	</nav>
+	<div class="container">
+		<section id="section1" class="panel panel-default">
+
+			<div class="panel-heading">
+				<div class="container">
+					<h3 class="panel-title">Uploaded file information</h3>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="container">
+					<div class="list-group">
+						<div>
+							<span>Name: </span>
+							<span><%= key%></span>
+						</div>
+						<div>
+							<span>Last modified:</span>
+							<span><%= data.LastModified%></span>
+						</div>
+						<div>
+							<span>Content Length:</span>
+							<span><%= data.ContentLength%></span>
+						</div>
+						<div>
+							<span>Content Type:</span>
+							<span><%= data.ContentType%></span>
+						</div>
+						<div>
+							<span>Metadata</span>
+							<div class="panel-body">
+								<div >
+									<span>User Name:</span>
+									<span><%= data.Metadata.username%></span>
+								</div>
+								<div>
+									<span>Ip address:</span>
+									<span><%= data.Metadata.addressip%></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<a type="button" class="btn btn-primary" href="/">Back</a>
+	</div>
+</div>
+<div class="panel-body">
+</div>
+</body>
+</html>
